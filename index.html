@@ -3,72 +3,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Gym Sport Collection">
-    <title>Gym Sport Collection</title>
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/hamburger.css">
+    <title>Gold Gym Fitness</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body>   
     <header class="header">
-        <nav class="navbar">
-            <span onclick=showSidebar() class="mobile">
-              <img 
-                src="https://user-images.githubusercontent.com/2970318/209647125-dc41103d-c545-4e2e-b89b-099fbfcde702.svg"
-                alt="Hamburger Icon"
-              />
-      
-            </span>
-            <span class="relative-container">
-      
-              <b>Gym Sport Collection</b>
-            </span>
-            <ul class="sidebar">
-              <li onclick=hideSidebar()><a class="noHover"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-              <li onclick=hideSidebar()><a class="Hover" href="#">Home</a></li>
-              <li onclick=hideSidebar()><a class="Hover" href="#form-section">Join Club</a></li>
-            </ul>
-            <!-- <ul>
-                <li>
-                    <b>Gym Sport Collection</b>
-                </li>
-            </ul> -->
-            <ul class="menu-nav">
-              <li class="hideOnMobile"><a href="#">Home</a></li>
-              <li class="hideOnMobile"><a href="#form-section">Join Club</a></li>
-            </ul>
-            <!-- <ul id="audio-desktop-size">
-              <li><audio id="player" src="assets/audio/boku-no-ost.mp3" loop></audio></li>
-              <li><button id="play">Play</button></li>
-              <li><input type="range" min="0" max="1" step="0.01" id="volume-slider" /></li>
-            </ul> -->
-            <span id="mode-gradient-switch">
-              <p>Mode Gradient</p>
-      
-              <label class="switch">
-                <input
-                  id="checkbox-mode-gradient"
-                  onchange="toggleGradientMode()"
-                  type="checkbox"
-                />
-                <span class="slider round"></span>
-              </label>
-            </span>
-        </nav>
-        
+        <div class="container-nav">
+            <img src="assets/img/gold_gym.png" alt="Gold Gym Logo">
+            <h1 class="header__title">Gold Gym Fitness</h1>            
+            <nav class="nav" id="navbar">                
+                <div class="nav__toggle" id="navToggle">
+                    <span class="nav__toggle-bar"></span>
+                    <span class="nav__toggle-bar"></span>
+                    <span class="nav__toggle-bar"></span>
+                </div>                
+                <ul class="nav__list" id="navList">
+                    <li class="nav__item"><a href="#about" class="nav__link">About Us</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+                    <li class="nav__item"><a href="#team" class="nav__link">Our Team</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    
-</body>
-<script>
-      //Hamburger button
-      function showSidebar(){
-            const sidebar = document.querySelector('.sidebar')
-            sidebar.style.display = 'flex'
-        }
-      function hideSidebar(){
-          const sidebar = document.querySelector('.sidebar')
-          sidebar.style.display = 'none'
-      }
 
-</script>
-<!-- <script src="assets/js/main.js"></script> -->
+    <main>
+        <section id="hero" class="hero">
+            <div class="container">
+                <div class="video-container transition__view">
+                    <video autoplay muted loop class="video" style="margin-top: 6rem;">
+                        <source src="assets/multimedia/gym_trailer.mp4" type="video/mp4">
+                    </video>               
+                    <h1>Our Gym Tell Stories</h1>
+                    <button id="open-popup-btn" class="open-popup-btn">Showreels</button>
+
+                    <div id="popup-container" class="popup-container">
+                        <div class="popup-content">
+                            <span id="close-popup-btn" class="close-btn">&times;</span>
+                            <iframe width="auto" height="auto" src="https://www.youtube.com/embed/HQfF5XRVXjU?si=E8tPPxiqaOz1EX0M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>   
+
+                </div>               
+            </div>
+        </section>
+        <section id="about" class="about transition__view">
+            <div class="container">
+                <h2 class="about__title" style="text-align: justify;">About Us</h2>
+                <p class="about__text">
+                    Gold Gym, a beacon of fitness excellence, has been transforming lives since its inception in 1965. 
+                    Founded by Joe Gold in Venice Beach, California, Gold Gym quickly became synonymous with bodybuilding, strength training, and a dedication to peak physical performance.
+                    This humble establishment grew from a single location into an internationally renowned fitness brand, boasting over 700 locations in 28 countries.
+                </p>
+            </div>
+        </section>
+
+        <section id="services" class="services transition__view">
+            <div class="container">
+                <h2 class="services__title" style="text-align: justify;">Our Services</h2>
+                <div class="services__list">                   
+                    <ul class="our_services">
+                        <li class="our_services-item">
+                          <figure class="our_services-banner">
+                            <img src="assets/img/01-state-of-the-art-equipment.png" alt="State of the Art &amp; eye" loading="lazy" width="510" height="600" class="w-100 ">
+                          </figure>
+                          <button id="open-popup-btn__stateoftheart" class="open-popup-btn__informational">State of the Art</button>
+                            <div id="popup-container__stateoftheart" class="popup-container__informational">
+                                <div class="popup-content__informational">
+                                    <span id="close-popup-btn__stateoftheart" class="close-btn__informational">&times;</span>                    
+                                     <h3> State Of The Art Equipment</h3>
+                                     <p> Each Powerhouse facility offers high quality cardio & strength equipment.</p>
+                                </div>
+                            </div>                           
+                        </li>
+            
+                        <li class="our_services-item">
+                          <figure class="our_services-banner">
+                            <img src="assets/img/02-group-classes.png" alt="Group Classes &amp; outdoor" loading="lazy" width="510" height="600" class="w-100 ">
+                          </figure>
+                          <button id="open-popup-btn__groupclasses" class="open-popup-btn__informational">Group Classes</button>
+                            <div id="popup-container__groupclasses" class="popup-container__informational">
+                                <div class="popup-content__informational">
+                                    <span id="close-popup-btn__groupclasses" class="close-btn__informational">&times;</span>                    
+                                     <h3>Group Classes</h3>
+                                     <p>We offer classes for yoga, spin, Zumba, Circuit Training, MX4 and more.</p>
+                                </div>
+                            </div>  
+                          
+                        </li>
+            
+                        <li class="our_services-item">
+                          <figure class="our_services-banner">
+                            <img src="assets/img/03-personal-trainers.png" alt="Group Classes" loading="lazy" width="510" height="600" class="w-100">
+                          </figure>
+                          <button id="open-popup-btn__personaltrainer" class="open-popup-btn__informational">Personal Trainers</button>
+                            <div id="popup-container__personaltrainer" class="popup-container__informational">
+                                <div class="popup-content__informational">
+                                    <span id="close-popup-btn__personaltrainer" class="close-btn__informational">&times;</span>                    
+                                     <h3>Personal Trainers</h3>
+                                     <p>Maximize your workout with the help of our personal trainers.</p>
+                                </div>
+                            </div>
+                        </li>
+            
+                        <li class="our_services-item">
+                          <figure class="our_services-banner">
+                            <img src="assets/img/04-spa-services.png" alt="Spa Service" loading="lazy" width="510" height="600" class="w-100">
+                          </figure>
+                          <button id="open-popup-btn__spaservice" class="open-popup-btn__informational">Spa Services</button>
+                            <div id="popup-container__spaservice" class="popup-container__informational">
+                                <div class="popup-content__informational">
+                                    <span id="close-popup-btn__spaservice" class="close-btn__informational">&times;</span>                    
+                                     <h3>Spa Services</h3>
+                                     <p>Relax after an intense workout with any one of our spa services.</p>
+                                </div>
+                            </div>
+                        </li>
+            
+                        <li class="our_services-item">
+                          <figure class="our_services-banner">
+                            <img src="assets/img/08-private-locker-rooms.png" alt="Private Locker Room" loading="lazy" width="510" height="600" class="w-100">
+                          </figure>
+                          <button id="open-popup-btn__privatelocker" class="open-popup-btn__informational">Private Locker</button>
+                            <div id="popup-container__privatelocker" class="popup-container__informational">
+                                <div class="popup-content__informational">
+                                    <span id="close-popup-btn__privatelocker" class="close-btn__informational">&times;</span>                    
+                                     <h3>Private Locker</h3>
+                                     <p>Our locker rooms are equipped to help you be on your way after a workout.</p>
+                                </div>
+                            </div>
+                        </li>
+            
+                        <li class="our_services-item">
+                          <figure class="our_services-banner">
+                            <img src="assets/img/09-247-access.png" alt="24 hours access" loading="lazy" width="510" height="600" class="w-100">
+                          </figure>
+                          <button id="open-popup-btn__24hours" class="open-popup-btn__informational">24 Hours Access</button>
+                            <div id="popup-container__24hours" class="popup-container__informational">
+                                <div class="popup-content__informational">
+                                    <span id="close-popup-btn__24hours" class="close-btn__informational">&times;</span>                    
+                                     <h3>24 Hours Access</h3>
+                                     <p>Workout when the time is right for you with 24/7 access.</p>
+                                </div>
+                            </div>
+                        </li>
+            
+                      </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="team transition__view">
+            <div class="container">
+                <h2 class="team__title" style="text-align: justify;">Our Team</h2>
+                    <!-- <div class="container-flex"> -->
+                        <div class="team__list">
+                            <article class="team__member box-1">
+                                <img src="assets/img/trainer1.jpg" alt="Team Member 1" class="photo__portrait">
+                                <h3 class="team__name-portrait">Josh Bruceman</h3>
+                                <!-- <p class="team__role">Role of Member One</p> -->
+                            </article>
+                            <article class="team__member box-2">
+                                <img src="assets/img/trainer2.jpg" alt="Team Member 2" class="photo__portrait">
+                                <h3 class="team__name-portrait">Catherine William</h3>
+                                <!-- <p class="team__role">Role of Member Two</p> -->
+                            </article>
+                            <article class="team__member box-3">
+                                <img src="assets/img/trainer4.jpg" alt="Team Member 3" class="photo__square">
+                                <h3 class="team__name-square">Michael Paradise</h3>
+                                <!-- <p class="team__role">Role of Member Three</p> -->
+                            </article>
+                            <article class="team__member box-4">
+                                <img src="assets/img/trainer6.jpg" alt="Team Member 4" class="photo__square">
+                                <h3 class="team__name-square">Taylor Morgan</h3>
+                                <!-- <p class="team__role">Role of Member Four</p> -->
+                            </article>
+                            <article class="team__member box-5">
+                                <img src="assets/img/trainer3.jpg" alt="Team Member 5" class="photo__square">
+                                <h3 class="team__name-square">Paul Logan</h3>
+                                <!-- <p class="team__role">Role of Member Five</p> -->
+                            </article>
+                            <article class="team__member box-6">
+                                <img src="assets/img/trainer5.jpg" alt="Team Member 6" class="photo__square">
+                                <h3 class="team__name-square">Brooklyn Matt</h3>
+                                <!-- <p class="team__role">Role of Member Six</p> -->
+                            </article>
+                        </div>
+
+                    <!-- </div> -->
+            </div>
+        </section>
+
+        <section id="contact" class="contact transition__view">
+            <div class="container">                  
+                <h2 class="contact__title" style="text-align: justify;">Contact Us</h2>
+                <form class="contact__form" id="contactForm">
+                    <fieldset>
+                        <legend>Get Membership and Subscription:</legend>
+                        <div>
+                            <label for="name" class="contact__label">Name:</label>
+                            <input type="text" id="name" name="name" class="contact__input" required>
+                        </div>
+                        <div>
+                            <label for="email" class="contact__label">Email:</label>
+                            <input type="email" id="email" name="email" class="contact__input" required>
+                        </div>
+                        <div>
+                            <label for="message" class="contact__label">Message:</label>
+                            <textarea id="message" name="message" class="contact__textarea" required></textarea>
+                        </div>
+                    </fieldset>        
+                    <button type="submit" class="contact__button">Send</button>            
+                </form>            
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">&copy; 2024 Company Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
 </html>

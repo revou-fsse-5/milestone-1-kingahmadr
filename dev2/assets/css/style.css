@@ -43,6 +43,12 @@ body {
     border: 0;
 }
 
+/* .container-nav > .nav__list > .nav__link:hover{
+    display: block;
+    transform: translateY(5px);    
+} */
+
+
 fieldset {
     margin: 2rem 0;
     border-radius: 1rem;
@@ -87,8 +93,7 @@ fieldset {
 }
 
 .nav__item {
-    display: inline;
-    /* margin: 0 1rem; */
+    display: inline-flex;
     background-color: var(--black);
     border: .125rem solid var(--white);
     padding: 0.75em 0.75em;
@@ -98,10 +103,12 @@ fieldset {
 .nav__link {
     color: #fff;
     text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 .nav__link:hover {
-    text-decoration: underline;
+    /* text-decoration: underline; */
+    transform: translateY(-5px);
 }
 
 .nav__toggle {
@@ -121,7 +128,8 @@ fieldset {
 }
 
 /* Toggle dark - light mode */
-body.light {background-color: var(--white);} /* #9b59b6 */
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+body.light {background-color: var(--white);} 
 
 body.light h1, body.light .support a {color: var(--black);}
 
@@ -131,7 +139,7 @@ body.light h1, body.light .support a {color: var(--black);}
 }
 
 .checkbox-label {
-  background-color: var(--white);
+  background-color: var(--into-yellow);
   width: 50px;
   height: 26px;
   border-radius: 50px;
@@ -143,9 +151,9 @@ body.light h1, body.light .support a {color: var(--black);}
   align-items: center;
 }
 
-.fa-moon {color: #f1c40f;}
+.fa-moon {color: #1e0ff1;}
 
-.fa-sun {color: #f39c12;}
+.fa-sun {color: #25f312;}
 
 .checkbox-label .ball {
   background-color: #fff;
@@ -160,7 +168,8 @@ body.light h1, body.light .support a {color: var(--black);}
 
 .checkbox:checked + .checkbox-label .ball {
   transform: translateX(24px);
-}
+  background-color: var(--black);
+} */
 /*  */
 
 /* Sections */
@@ -341,6 +350,8 @@ li{
 .contact__label, .contact__input, .contact__textarea {
     width: 100%;
     margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-radius: 1rem;
 }
 
 .contact__button {
@@ -349,6 +360,7 @@ li{
     border: none;
     padding: 0.5rem 1rem;
     cursor: pointer;
+    border-radius: 1rem;
 }
 
 .contact__button:hover {
@@ -366,6 +378,9 @@ li{
     border-top-style: solid;
 }
 
+
+
+/* Responsive Design */
 @media only screen and (min-width: 1100px) {
     .our_services-banner > img {
         width: 30em;
@@ -378,20 +393,37 @@ li{
     }
 }
 
-@media only screen and (min-width: 800px) and (max-width: 1024px){
-    .our_services-banner > img {
-        width: 20em;
-        height: auto;
-        border-radius: 4em;
-        
+@media only screen and (min-width: 770px) and (max-width: 970px){
+    .team__name-square{
+        font-size: 0.75em;
+    }
+    .header__title{
+        display: none;
+        transition: 2s;
+    }
+    .popup-content{
+        margin-top: 10rem;
+    }
+    .popup-content iframe{
+        height: 300px;
     }
 }
 
-/* Responsive Design */
-@media (min-width: 800px){
+@media only screen and (min-width: 800px) {
+    /* .header__title{
+        display: none;
+    } */
     h2{
         font-size: 3em;
     }
+    .popup-content{
+        margin-top: 10rem;
+    }
+
+    .popup-content iframe{
+        height: 500px;
+    }
+
     .video-container > h1 {
         color: var(--into-yellow);
         left: 10%;
@@ -429,13 +461,21 @@ li{
     .team__name-portrait{
         font-size: 2em;
     }
-
-
-
+    .our_services-banner > img {
+        width: 30em;
+        height: auto;
+        border-radius: 4em;
+        
+    }
 }
 
 @media (max-width: 768px) {
-
+    .popup-content{
+        margin-top: 10rem;
+    }
+    .popup-content iframe{
+        height: 300px;
+    }
     h2{
         font-size: 3em;
     }
@@ -453,7 +493,7 @@ li{
         display: none;
         flex-direction: column;
         width: 100%;
-        background-color: var(--black);
+        background-color: var(--white);
         position: absolute;
         top: 6rem;
         left: 0;
@@ -532,6 +572,12 @@ li{
 }
 
 @media (max-width: 480px) {
+    .popup-content{
+        margin-top: 10rem;
+    }
+    .popup-content iframe{
+        height: 200px;
+    }
     .mode-ctn{
         margin-right: 2.5rem;
     }
@@ -606,6 +652,7 @@ li{
 }
 
 @media (max-width: 380px){
+    
     .service, .team__member {
         width: 100%;
     }
@@ -761,11 +808,13 @@ li{
     width: 80%;
     max-width: 2000px;
     max-height: 2000px;
+    transition: 1s;
 }
 
 .popup-content iframe {
     width: 100%;
-    height: 500px;
+    /* margin-top: 20rem; */
+    /* height: 500px; */
     border: none;
     border-radius: 4px;
    
@@ -773,10 +822,11 @@ li{
 
 .close-btn {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 0%;
+    right: 2px;
     font-size: 24px;
     cursor: pointer;
+    color: var(--black);
 }
 /* End */
 
@@ -793,6 +843,9 @@ li{
     background-color: var(--black);
 }
 
+.open-popup-btn__informational:hover{
+    transform: translateY(5px);
+}
 .popup-container__informational {
     display: none; /* Hidden by default */
     position: fixed;
