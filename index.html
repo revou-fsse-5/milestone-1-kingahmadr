@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gym Sport Collection">
+    <title>Gym Sport Collection</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/hamburger.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <span onclick=showSidebar() class="mobile">
+              <img 
+                src="https://user-images.githubusercontent.com/2970318/209647125-dc41103d-c545-4e2e-b89b-099fbfcde702.svg"
+                alt="Hamburger Icon"
+              />
+      
+            </span>
+            <span class="relative-container">
+      
+              <b>Gym Sport Collection</b>
+            </span>
+            <ul class="sidebar">
+              <li onclick=hideSidebar()><a class="noHover"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+              <li onclick=hideSidebar()><a class="Hover" href="#">Home</a></li>
+              <li onclick=hideSidebar()><a class="Hover" href="#form-section">Join Club</a></li>
+            </ul>
+            <!-- <ul>
+                <li>
+                    <b>Gym Sport Collection</b>
+                </li>
+            </ul> -->
+            <ul class="menu-nav">
+              <li class="hideOnMobile"><a href="#">Home</a></li>
+              <li class="hideOnMobile"><a href="#form-section">Join Club</a></li>
+            </ul>
+            <!-- <ul id="audio-desktop-size">
+              <li><audio id="player" src="assets/audio/boku-no-ost.mp3" loop></audio></li>
+              <li><button id="play">Play</button></li>
+              <li><input type="range" min="0" max="1" step="0.01" id="volume-slider" /></li>
+            </ul> -->
+            <span id="mode-gradient-switch">
+              <p>Mode Gradient</p>
+      
+              <label class="switch">
+                <input
+                  id="checkbox-mode-gradient"
+                  onchange="toggleGradientMode()"
+                  type="checkbox"
+                />
+                <span class="slider round"></span>
+              </label>
+            </span>
+        </nav>
+        
+    </header>
+    
+</body>
+<script>
+      //Hamburger button
+      function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+      function hideSidebar(){
+          const sidebar = document.querySelector('.sidebar')
+          sidebar.style.display = 'none'
+      }
+
+</script>
+<!-- <script src="assets/js/main.js"></script> -->
+</html>

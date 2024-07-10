@@ -1,0 +1,5 @@
+@media (min-width: 768px){
+    .nav-bar__burger-wrap{
+        display: none;
+    }
+  }

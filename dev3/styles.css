@@ -1,0 +1,36 @@
+/* Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Default layout for larger screens */
+    grid-gap: 10px; /* Gap between grid items */
+}
+
+/* Grid Item */
+.grid-item {
+    position: relative; /* Needed for the absolute positioning of the image */
+    overflow: hidden; /* Ensures content doesn't overflow the grid item */
+}
+
+/* Image Stretching */
+.grid-image {
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the grid area without distortion */
+}
+
+/* Media Query for Medium Screens */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2-column layout for medium screens */
+    }
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* 1-column layout for small screens */
+    }
+}
