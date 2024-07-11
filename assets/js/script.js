@@ -164,21 +164,7 @@ teamNameSquareChange(mediaQuery);
 mediaQuery.addListener(teamNamePortraitChange);
 mediaQuery.addListener(teamNameSquareChange);
 
-// // Function to resize font size of the square photo
-// function teamNameSquareChangeProperty(e) {
-//     const items = document.querySelectorAll('.team__name-square');
-//     if (e.matches) {
-//         items.forEach(item => {
-//             item.style['font-size'] = '0.75em';
-//         });
-//     } else {
-//         items.forEach(item => {
-//             item.style['font-size'] = '1em';
-//         });
-//     }
-// }
-
-// const mediaQueryChange = window.matchMedia('(min-width: 770px) and (max-width: 970px)');
-// teamNameSquareChangeProperty(mediaQueryChange);
-// mediaQueryChange.addListener(teamNameSquareChangeProperty);
-// 
+// Light Mode
+document.getElementById('light-mode-toggle').addEventListener('click', function() {
+    document.body.classList.toggle('body-light');
+  });

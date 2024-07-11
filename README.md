@@ -122,9 +122,6 @@ Since I use CloudFlare as my DNS manager, I need to add those record to my Cloud
 
 Happy browsing!!
 
-
-- Refresh your Domain Management page, and the deployment should now pointed to your main custom Domain
-
 ## 📔 Link to my deployment and repository
 * Deploy link: [ahmadcloud.my.id](https://ahmadcloud.my.id/) 
 * Repository link: [github.com/revou-fsse-5/milestone-1-kingahmadr.git](https://github.com/revou-fsse-5/milestone-1-kingahmadr.git)

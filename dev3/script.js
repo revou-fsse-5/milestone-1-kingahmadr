@@ -1,4 +1,3 @@
-const checkbox = document.getElementById("checkbox")
-checkbox.addEventListener("change", () => {
-  document.body.classList.toggle("dark")
-})
+document.getElementById('light-mode-toggle').addEventListener('click', function() {
+  document.body.classList.toggle('light-mode');
+});
